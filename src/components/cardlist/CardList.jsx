@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './cardList.module.css';
-import Pagination from '../pagination/Pagination';
+// import Pagination from '../pagination/Pagination';
 import Card from '../card/Card';
 
 const CardList = ({ page, cat }) => {
@@ -11,7 +11,7 @@ const CardList = ({ page, cat }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `/posts?page=${page}&cat=${cat || ''}`,
+          `https://www.finprez.com/api/posts?page=${page}&cat=${cat || ''}`,
           {
             cache: 'no-store',
           }
@@ -45,7 +45,7 @@ const CardList = ({ page, cat }) => {
           <Card item={item} key={item._id} />
         ))}
       </div>
-      <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} />
+      {/* <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} /> */}
     </div>
   );
 };
