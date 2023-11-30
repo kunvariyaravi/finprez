@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './cardList.module.css';
 // import Pagination from '../pagination/Pagination';
-// import Card from '../card/Card';
+import Card from '../card/Card';
 
 const CardList = ({ page, cat }) => {
   const [posts, setPosts] = useState([]);
@@ -42,7 +42,7 @@ const CardList = ({ page, cat }) => {
       <h1 className={styles.title}>Recent Posts</h1>
       <div className={styles.posts}>
         {posts.map((item) => (
-          // <Card item={item} key={item._id} />
+          <Card item={item} key={item._id} />
         ))}
       </div>
       {/* <Pagination page={page} hasPrev={hasPrev} hasNext={hasNext} /> */}
