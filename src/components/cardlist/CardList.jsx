@@ -11,7 +11,7 @@ const CardList = ({ page, cat }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://www.finprez.com/api/posts?page=${page}&cat=${cat || ''}`,
+          `/posts?page=${page}&cat=${cat || ''}`,
           {
             cache: 'no-store',
           }
