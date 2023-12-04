@@ -8,16 +8,7 @@
   * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;    
-  }
-
-  .blur{
-    position: absolute;
-    width: 22rem;
-    height: 14rem;
-    border-radius: 50%;
-    background: #a6ddf0;
-    filter: blur(72px)
+    box-sizing: border-box;
   }
   
   body {
@@ -38,7 +29,7 @@
   }
   
   .light {
-    --bg: #f3f3f3;
+    --bg: white;
     --textColor: black;
     --softBg: #f0f0f0;
     --softTextColor: #626262;
@@ -56,31 +47,6 @@
     margin-right: auto;
     padding-left: 80px;
     padding-right: 80px;
-  }
-
-  p {
-    font-size: 20px;
-    font-weight: 300;
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-
-  h2 {
-    font-size: 32px;    
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-  
-  h3 {
-    font-size: 26px;    
-    margin-bottom: 20px;
-    margin-top: 20px;
-  }
-
-  h4 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    margin-top: 20px;
   }
   
   @media screen and (max-width: 1536px) {
@@ -108,10 +74,6 @@
   @media screen and (max-width: 640px) {
     .wrapper {
       max-width: 475px;
-    }
-
-    p{
-      font-size: 18px;
     }
   }
   
