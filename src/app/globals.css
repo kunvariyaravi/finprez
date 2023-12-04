@@ -1,5 +1,5 @@
 :root {
-    --bg: white;
+    --bg: #f3f3f3;
     --textColor: black;
     --softBg: #f0f0f0;
     --softTextColor: #626262;
@@ -8,7 +8,16 @@
   * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
+  }
+
+  .blur{
+    position: absolute;
+    width: 22rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: #a6ddf0;
+    filter: blur(72px)
   }
   
   body {
@@ -29,7 +38,7 @@
   }
   
   .light {
-    --bg: white;
+    --bg: #f3f3f3;
     --textColor: black;
     --softBg: #f0f0f0;
     --softTextColor: #626262;
