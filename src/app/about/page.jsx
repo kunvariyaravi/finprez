@@ -40,7 +40,14 @@ const About = () => {
         coverage tailored for investors, traders and financial professionals
         like you.
       </p>
-      <p>Welcome to FinPrez, your trusted source for accurate and reliable financial news. Our team of experienced traders and analysts is dedicated to providing you with up-to-date market analysis and insights. Whether you're a seasoned investor or just starting out, we have the information you need to make informed decisions. Join us today and take your investing strategy to the next level.</p>
+      <p>
+        Welcome to FinPrez, your trusted source for accurate and reliable
+        financial news. Our team of experienced traders and analysts is
+        dedicated to providing you with up-to-date market analysis and insights.
+        Whether you are a seasoned investor or just starting out, we have the
+        information you need to make informed decisions. Join us today and take
+        your investing strategy to the next level.
+      </p>
     </div>
   );
 };
