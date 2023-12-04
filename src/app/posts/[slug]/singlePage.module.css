@@ -9,7 +9,7 @@
   }
   
   .title {
-    font-size: 64px;
+    font-size: xx-large;
     margin-bottom: 50px;
   }
   
@@ -38,7 +38,7 @@
   }
   
   .username {
-    font-size: 20px;
+    font-size: medium;
     font-weight: 500;
   }
   
@@ -65,19 +65,19 @@
   }
   
   .description p {
-    font-size: 20px;
+    font-size: medium;
     font-weight: 300;
     margin-bottom: 20px;
     margin-top: 20px;
   }
 
-  .description h2 {
+  /* .description h2 {
     font-size: 32px;    
     margin-bottom: 20px;
     margin-top: 20px;
   }
-  
-  .description h3 {
+   */
+  /* .description h3 {
     font-size: 26px;    
     margin-bottom: 20px;
     margin-top: 20px;
@@ -87,7 +87,7 @@
     font-size: 22px;
     margin-bottom: 20px;
     margin-top: 20px;
-  }
+  } */
 
   @media screen and (max-width: 1536px) {
     .title {
