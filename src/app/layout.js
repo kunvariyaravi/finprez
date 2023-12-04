@@ -12,16 +12,16 @@ export const metadata = {
   title: "FinPrez",
   description:
     "FinPrez provides the latest stock market, IPO, financial and business news. Get personal finance advice, company news and more",
-    openGraph: {
-      url: "https://next-enterprise.vercel.app/",
-      images: [
-        {
-          width: 1200,
-          height: 630,
-          url: "https://raw.githubusercontent.com/Blazity/next-enterprise/main/project-logo.png",
-        },
-      ],
-    },  
+    // openGraph: {
+    //   url: "https://next-enterprise.vercel.app/",
+    //   images: [
+    //     {
+    //       width: 1200,
+    //       height: 630,
+    //       url: "https://raw.githubusercontent.com/Blazity/next-enterprise/main/project-logo.png",
+    //     },
+    //   ],
+    // },  
 };
 
 export default function RootLayout({ children }) {

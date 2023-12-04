@@ -10,12 +10,10 @@ export default function Home({ searchParams }) {
 
   return (
     <div className={styles.container}>
-       <div className="blur" style={{top: '15%', right: '0'}}></div>
-        <div className="blur" style={{top: '36%', left: '-8rem'}}></div>
       {/* <Featured /> */}
       {/* <CategoryList /> */}
       <div className={styles.content}>
-        <CardList page={page}/>
+        <CardList page={page} />
         <Menu />
       </div>
     </div>
