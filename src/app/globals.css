@@ -57,6 +57,31 @@
     padding-left: 80px;
     padding-right: 80px;
   }
+
+  p {
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 32px;    
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  
+  h3 {
+    font-size: 26px;    
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
   
   @media screen and (max-width: 1536px) {
     .wrapper {
@@ -83,6 +108,10 @@
   @media screen and (max-width: 640px) {
     .wrapper {
       max-width: 475px;
+    }
+
+    p{
+      font-size: 18px;
     }
   }
   

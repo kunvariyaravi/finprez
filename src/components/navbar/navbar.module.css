@@ -14,9 +14,9 @@
 
 .logo {
   flex: 1;
-  font-size: xx-large;
+  font-size: 60px;
   font-weight: bold;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .links {

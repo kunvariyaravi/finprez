@@ -11,8 +11,10 @@ const About = () => {
         providing you with the power to make smart investments. Join us as we
         make financial success a part of your life.
       </p>
-      FinPrez is a financial news team dedicated to quality and accuracy. We
-      provide up-to-date market analysis and insight from experienced traders.
+      <p>
+        FinPrez is a financial news team dedicated to quality and accuracy. We
+        provide up-to-date market analysis and insight from experienced traders.
+      </p>
       <p>
         Our team holds certifications in market analysis and NASDAQ exchange
         best practices, to ensure our customers make confident decisions. We
