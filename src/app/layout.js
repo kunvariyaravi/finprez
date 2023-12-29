@@ -5,6 +5,7 @@ import Footer from "@/components/footer/Footer";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import AuthProvider from "@/providers/AuthProvider";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const lexend = Lexend({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
                 <div className="wrapper">
                   <Navbar />
                   {children}
+                  <SpeedInsights />
                   <Footer />
                 </div>
               </div>
