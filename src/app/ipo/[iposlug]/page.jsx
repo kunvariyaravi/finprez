@@ -102,7 +102,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3 className={styles.h3m}>Important Dates:-</h3>
+          <h3>Important Dates:-</h3>
           <table className={styles.table}>
             <tbody>
               <tr>
@@ -131,7 +131,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3 className={styles.h3m}>Financial Information :-</h3>
+          <h3>Financial Information :-</h3>
           <p className={styles.pm}>Amount in ₹ {data.amountin}</p>
           <table className={styles.table}>
             <thead>
@@ -188,7 +188,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3 className={styles.h3m}>{data.title} Lot Information :-</h3>
+          <h3>{data.title} Lot Information :-</h3>
           <table className={styles.table}>
             <thead>
               <tr>
@@ -231,7 +231,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3 className={styles.h3m}>Key Performance Indicator :-</h3>
+          <h3>Key Performance Indicator :-</h3>
           <table className={styles.table}>
             <tbody>
               <tr>
@@ -264,7 +264,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3 className={styles.h3m}>{data.title} Subscription Status :-</h3>
+          <h3>{data.title} Subscription Status :-</h3>
           <table className={styles.table}>
             <thead>
               <tr>
@@ -303,7 +303,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3 className={styles.h3m}>IPO Prospectus :-</h3>
+          <h3>IPO Prospectus :-</h3>
           <table className={styles.table}>
             <tbody>
               <tr>
@@ -316,7 +316,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3 className={styles.h3m}>{data.company} Contact Details :-</h3>
+          <h3>{data.company} Contact Details :-</h3>
           <p className={styles.pm}>Address:- {data.contactaddress}</p>
           <p className={styles.pm}>Phone:- {data.contactphone}</p>
           <p className={styles.pm}>E-mail:- {data.contactemail}</p>
