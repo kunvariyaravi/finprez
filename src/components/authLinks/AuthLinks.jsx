@@ -11,7 +11,7 @@ const AuthLinks = () => {
 
   return (
     <>
-      {status === "unauthenticated" ? (
+      {/* {status === "unauthenticated" ? (
         <Link href="/login" className={styles.link}>
           Login
         </Link>
@@ -24,7 +24,7 @@ const AuthLinks = () => {
             Logout
           </span>
         </>
-      )}
+      )} */}
       <div className={styles.burger} onClick={() => setOpen(!open)}>
         <div className={styles.line}></div>
         <div className={styles.line}></div>
@@ -35,14 +35,14 @@ const AuthLinks = () => {
           <Link href="/">Homepage</Link>
           <Link href="/">About</Link>
           <Link href="/">Contact</Link>
-          {status === "notauthenticated" ? (
+          {/* {status === "notauthenticated" ? (
             <Link href="/login">Login</Link>
           ) : (
             <>
               <Link href="/write">Write</Link>
               <span className={styles.link}>Logout</span>
             </>
-          )}
+          )} */}
         </div>
       )}
     </>

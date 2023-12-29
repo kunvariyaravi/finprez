@@ -25,13 +25,13 @@ const Footer = () => {
         </div> */}
       </div>
       <div className={styles.links}>
-        {/* <div className={styles.list}> */}
-          {/* <span className={styles.listTitle}>Links</span> */}
-          {/* <Link href="/">Homepage</Link> */}
-          {/* <Link href="/">Blog</Link> */}
-          {/* <Link href="/">About</Link> */}
-          {/* <Link href="/">Contact</Link> */}
-        {/* </div> */}
+        {/* <div className={styles.list}>
+          <span className={styles.listTitle}>Links</span>
+          <Link href="/">Homepage</Link>
+          <Link href="/">Blog</Link>
+          <Link href="/">About</Link>
+          <Link href="/">Contact</Link>
+        </div> */}
         {/* <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
           <Link href="/">Style</Link>

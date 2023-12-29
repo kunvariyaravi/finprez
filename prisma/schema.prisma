@@ -47,6 +47,7 @@ model User {
   sessions      Session[]
   Post          Post[]
   Comment       Comment[]
+  ipoposts      Ipopost[]
 }
 
 model VerificationToken {
@@ -88,4 +89,126 @@ model Comment {
   user      User     @relation(fields: [userEmail], references: [email])
   postSlug  String
   post      Post     @relation(fields: [postSlug], references: [slug])
+}
+
+model Ipopost {
+  id          String   @id @default(cuid()) @map("_id")
+  createdAt   DateTime @default(now())
+  title       String
+  iposlug     String   @unique
+  company     String
+  description String
+  img         String?
+
+  // important dates
+  opendate      DateTime?
+  closedate     DateTime?
+  allotmentdate DateTime?
+  listingdate   DateTime?
+
+  price            String?
+  lot              Int?
+  gmp              Int?
+  listingat        String?
+  totalissueshares Int?
+  totalissuesize   String?
+  freshissueshares Int?
+  freshissuesize   String?
+  ofsissueshares   Int?
+  ofsissuesize     String?
+  facevalue        String?
+  minamount        String?
+  retailquota      Int?
+  qibquota         Int?
+  niiquota         Int?
+
+  // Key Performance Indicator
+  t1          String?
+  t2          String?
+  t3          String?
+  t4          String?
+  t1assets    Float?
+  t2assets    Float?
+  t3assets    Float?
+  t4assets    Float?
+  t1revenue   Float?
+  t2revenue   Float?
+  t3revenue   Float?
+  t4revenue   Float?
+  t1pat       Float?
+  t2pat       Float?
+  t3pat       Float?
+  t4pat       Float?
+  t1nw        Float?
+  t2nw        Float?
+  t3nw        Float?
+  t4nw        Float?
+  t1ressur    Float?
+  t2ressur    Float?
+  t3ressur    Float?
+  t4ressur    Float?
+  t1borrowing Float?
+  t2borrowing Float?
+  t3borrowing Float?
+  t4borrowing Float?
+  amountin    String?
+
+  // Lot Information
+  rminlot    Int?
+  rminshares Int?
+  rminamount Int?
+  rmaxlot    Int?
+  rmaxshares Int?
+  rmaxamount Int?
+  sminlot    Int?
+  sminshares Int?
+  sminamount Int?
+  smaxlot    Int?
+  smaxshares Int?
+  smaxamount Int?
+  bminlot    Int?
+  bminshares Int?
+  bminamount Int?
+
+  // Key Performance Indicator
+  pe           Float?
+  mcap         Float?
+  roe          String?
+  roce         String?
+  debttoequity Float?
+  eps          Float?
+  ronw         String?
+
+  // Subscription Status
+  subdate1   DateTime?
+  subqib1    Float?
+  subnii1    Float?
+  subretail1 Float?
+  subtotal1  Float?
+  subdate2   DateTime?
+  subqib2    Float?
+  subnii2    Float?
+  subretail2 Float?
+  subtotal2  Float?
+  subdate3   DateTime?
+  subqib3    Float?
+  subnii3    Float?
+  subretail3 Float?
+  subtotal3  Float?
+
+  // Contact Details
+  contactaddress String?
+  contactphone   String?
+  contactemail   String?
+  contactwebsite String?
+
+  // IPO Registrar
+  registraraddress String?
+  registrarphone   String?
+  registraremail   String?
+  registrarwebsite String?
+
+  // Relationships
+  user   User   @relation(fields: [userId], references: [id])
+  userId String
 }

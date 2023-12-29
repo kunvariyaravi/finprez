@@ -67,26 +67,26 @@
   .description p {
     font-size: 20px;
     font-weight: 300;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .description h2 {
-    font-size: 32px;    
-    margin-bottom: 20px;
+    font-size: 32px;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .description h3 {
-    font-size: 26px;    
-    margin-bottom: 20px;
+    font-size: 26px;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .description h4 {
     font-size: 22px;
-    margin-bottom: 20px;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   @media screen and (max-width: 1536px) {
