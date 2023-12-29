@@ -1,47 +1,102 @@
-/* singleipo.module.css */
-
-/* Common styles for all screen sizes */
-.wrapper {
-  width: 100%;
-  margin: 0 auto;
-  padding: 20px;
-}
 
 .title {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 64px;
+  margin-bottom: 50px;
+}
+
+.imageContainer {
+  flex: 1;
+  height: 600px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 30px;
 }
 
 .content {
   display: flex;
-  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .post {
-  flex: 1;
+  flex: 5;
+  margin-top: 60px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+}
+
+.pm {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.h2m {
+  font-size: 32px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.h3m {
+  font-size: 26px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.h4m {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1536px) {
+  .title {
+    font-size: 54px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .title {
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .imageContainer {
+    /* display: none; */
+    height: 300px;
+  }
+}
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .description pm {
+    font-size: 18px;
+  }
+}
+
+.tableContainer {
+  margin-top: 20px;
 }
 
 .table {
   width: 100%;
-  margin-top: 20px;
   border-collapse: collapse;
 }
 
 .tableCell {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: left;
+  text-align: center;
 }
 
-/* Responsive styles using media queries */
-@media only screen and (min-width: 768px) {
-  .title {
-    font-size: 32px;
-  }
-
-  .table {
-    margin-top: 30px;
-  }
+.thCell {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  background-color: orange;
+  color: white;
 }
-
-/* Add more media queries for other screen sizes as needed */

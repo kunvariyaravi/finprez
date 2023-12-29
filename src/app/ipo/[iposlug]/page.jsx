@@ -32,16 +32,16 @@ const ipoPage = async ({ params }) => {
   const data = await getData(iposlug);
 
   return (
-    <div className={styles.wrapper}>
-      <h2 className={styles.title}>{data?.title}</h2>
-      <div className={styles.content}>
-        <div className={styles.post}>
+    <div>
+      <h2>{data?.title}</h2>
+      <div>
+        <div>
           <div />
-          <p className={styles.pm}>
+          <p>
           {data.title} bidding starts from {formatDate(data.opendate)} and ends on {formatDate(data.closedate)}. The allotment for the {data.title} is expected to be finalized on {formatDate(data.allotmentdate)}. {data.title} will list on {data.listingat} with tentative listing date fixed as {formatDate(data.listingdate)}. {data.title} price band is set at {data.price} per share. The minimum lot size for an application is {data.lot} Shares. The minimum amount of investment required by retail investors is {data.rminamount}.</p>
-          <h3 className={styles.h3m}>About {data.company} :-</h3>
-          <p className={styles.pm}>{data.description}</p>
-          <h3 className={styles.h3m}>{data.title} Details :-</h3>
+          <h3>About {data.company} :-</h3>
+          <p>{data.description}</p>
+          <h3>{data.title} Details :-</h3>
           <table className={styles.table}>
             <tbody>
               <tr>
@@ -331,7 +331,7 @@ const ipoPage = async ({ params }) => {
             <Comments postSlug={iposlug} />
           </div>
         </div>
-        <Menu />
+        {/* <Menu /> */}
       </div>
     </div>
   );
