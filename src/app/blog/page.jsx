@@ -1,4 +1,4 @@
-import CardList from "../../components/cardlist"
+import CardList from "../../components/cardlist.jsx"
 import styles from "./blogPage.module.css";
 import Menu from "@/components/Menu/Menu";
 
