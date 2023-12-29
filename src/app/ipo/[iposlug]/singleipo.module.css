@@ -1,148 +1,47 @@
+/* singleipo.module.css */
+
+/* Common styles for all screen sizes */
 .wrapper {
-  max-width: 1536px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 80px;
-  padding-right: 80px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
 }
-
-@media screen and (max-width: 1536px) {
-  .wrapper {
-    max-width: 1366px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .wrapper {
-    max-width: 1024px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .wrapper {
-    max-width: 768px;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .wrapper {
-    max-width: 640px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .wrapper {
-    max-width: 640px;
-  }
-}
-
 
 .title {
-  font-size: 64px;
-  margin-bottom: 50px;
-}
-
-.imageContainer {
-  flex: 1;
-  height: 600px;
-  position: relative;
-  margin-top: 20px;
-}
-
-.image {
-  object-fit: cover;
-  border-radius: 30px;
+  font-size: 24px;
+  margin-bottom: 20px;
 }
 
 .content {
   display: flex;
-  gap: 50px;
+  flex-wrap: wrap;
 }
 
 .post {
-  flex: 5;
-  margin-top: 60px;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-}
-
-.pm {
-  font-size: 20px;
-  font-weight: 300;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.h2m {
-  font-size: 32px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.h3m {
-  font-size: 26px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.h4m {
-  font-size: 22px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-@media screen and (max-width: 1536px) {
-  .title {
-    font-size: 54px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .title {
-    font-size: 48px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  .imageContainer {
-    /* display: none; */
-    height: 300px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .title {
-    font-size: 36px;
-  }
-}
-
-.tableContainer {
-  margin-top: 20px;
-  overflow-x: auto;
+  flex: 1;
 }
 
 .table {
   width: 100%;
+  margin-top: 20px;
   border-collapse: collapse;
 }
 
 .tableCell {
   border: 1px solid #ddd;
   padding: 8px;
-  text-align: center;
+  text-align: left;
 }
 
-.thCell {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-  background-color: orange;
-  color: white;
-}
+/* Responsive styles using media queries */
+@media only screen and (min-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
 
-@media screen and (max-width: 640px) {
   .table {
-    font-size: 14px;
+    margin-top: 30px;
   }
 }
 
-@media screen and (max-width: 640px) {
-  .pm {
-    margin-top: 8px;
-    margin-bottom: 8px;
-  }
-}
+/* Add more media queries for other screen sizes as needed */
