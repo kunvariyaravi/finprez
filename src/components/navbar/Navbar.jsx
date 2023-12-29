@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <div className={styles.container}>
      <Image src="/logo.svg" alt="finprez" width={60} height={60} />
-      <Link href="/" className={styles.logo}>FinPrez</Link>
+      <Link href="/" className={styles.logo}><h1>FinPrez</h1></Link>
       <div className={styles.links}>
         <ThemeToggle />
         <Link href="/" className={styles.link}>Homepage</Link>
