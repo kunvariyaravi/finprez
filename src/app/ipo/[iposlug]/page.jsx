@@ -317,16 +317,16 @@ const ipoPage = async ({ params }) => {
             </tbody>
           </table>
           <h3>{data.company} Contact Details :-</h3>
-          <p className={styles.pm}>Address:- {data.contactaddress}</p>
-          <p className={styles.pm}>Phone:- {data.contactphone}</p>
-          <p className={styles.pm}>E-mail:- {data.contactemail}</p>
-          <p className={styles.pm}>Website:- {data.contactwebsite}</p>
-          <h3 className={styles.h3m}>IPO Registrar :-</h3>
-          <p className={styles.pm}>Address:- {data.registraraddress}</p>
-          <p className={styles.pm}>Phone:- {data.registrarphone}</p>
-          <p className={styles.pm}>E-mail:- {data.registraremail}</p>
-          <p className={styles.pm}>Website:- {data.registrarwebsite}</p>
-          <h3 className={styles.h3m}>{data.company} GMP :-</h3>
+          <p>Address:- {data.contactaddress}</p>
+          <p>Phone:- {data.contactphone}</p>
+          <p>E-mail:- {data.contactemail}</p>
+          <p>Website:- {data.contactwebsite}</p>
+          <h3>IPO Registrar :-</h3>
+          <p>Address:- {data.registraraddress}</p>
+          <p>Phone:- {data.registrarphone}</p>
+          <p>E-mail:- {data.registraremail}</p>
+          <p>Website:- {data.registrarwebsite}</p>
+          <h3>{data.company} GMP :-</h3>
           <div className={styles.comment}>
             <Comments postSlug={iposlug} />
           </div>
