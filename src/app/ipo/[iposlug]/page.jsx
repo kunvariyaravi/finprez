@@ -33,6 +33,7 @@ const ipoPage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.wrapper}>
       <h2 className={styles.title}>{data?.title}</h2>
       <div className={styles.content}>
         <div className={styles.post}>
@@ -332,6 +333,7 @@ const ipoPage = async ({ params }) => {
           </div>
         </div>
         <Menu />
+      </div>
       </div>
     </div>
   );
