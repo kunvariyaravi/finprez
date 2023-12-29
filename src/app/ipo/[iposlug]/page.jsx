@@ -32,7 +32,7 @@ const ipoPage = async ({ params }) => {
   const data = await getData(iposlug);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.wrapper}>
       <h2 className={styles.title}>{data?.title}</h2>
       <div className={styles.content}>
         <div className={styles.post}>
