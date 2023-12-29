@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const getData = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/ipopost", {
+    const res = await fetch("https://www.finprez.com/api/ipopost", {
       cache: "no-store",
     });
 
@@ -77,7 +77,7 @@ const IpoList = async () => {
           {posts?.map((item) => (
             <tr key={item._id}>
               <td className={styles.tableCell}>
-                <Link href={`http://localhost:3000/ipo/${item.iposlug}`}>
+                <Link href={`https://www.finprez.com/ipo/${item.iposlug}`}>
                   {item.title}
                 </Link>
               </td>
