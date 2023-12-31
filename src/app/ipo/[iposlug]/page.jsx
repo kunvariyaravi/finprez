@@ -112,7 +112,7 @@ const ipoPage = async ({ params }) => {
           </tbody>
         </table>
         </div>
-        <h3 className={styles.responsiveHeading}>Important Dates:-</h3>
+        <h2 className={styles.responsiveHeading}>Important Dates:-</h2>
         <div className={styles.tableContainer}>
         <table className={`${styles.table} ${styles.responsiveTable}`}>
           <tbody>
@@ -139,7 +139,7 @@ const ipoPage = async ({ params }) => {
           </tbody>
         </table>
         </div>
-        <h3 className={styles.responsiveHeading}>Financial Information :-</h3>
+        <h2 className={styles.responsiveHeading}>Financial Information :-</h2>
         <p className={styles.responsiveParagraph}>Amount in ₹ {data.amountin}</p>
         <div className={styles.tableContainer}>
         <table className={`${styles.table} ${styles.responsiveTable}`}>
@@ -198,7 +198,7 @@ const ipoPage = async ({ params }) => {
           </tbody>
         </table>
         </div>
-        <h3 className={styles.responsiveHeading}>{data.title} Lot Information :-</h3>
+        <h2 className={styles.responsiveHeading}>{data.title} Lot Information :-</h2>
         <div className={styles.tableContainer}>
         <table className={`${styles.table} ${styles.responsiveTable}`}>
           <thead>
@@ -243,7 +243,7 @@ const ipoPage = async ({ params }) => {
           </tbody>
         </table>
         </div>
-        <h3 className={styles.responsiveHeading}>Key Performance Indicator :-</h3>
+        <h2 className={styles.responsiveHeading}>Key Performance Indicator :-</h2>
         <div className={styles.tableContainer}>
         <table className={`${styles.table} ${styles.responsiveTable}`}>
           <tbody>
@@ -278,7 +278,7 @@ const ipoPage = async ({ params }) => {
           </tbody>
         </table>
         </div>
-        <h3 className={styles.responsiveHeading}>{data.title} Subscription Status :-</h3>
+        <h2 className={styles.responsiveHeading}>{data.title} Subscription Status :-</h2>
         <div className={styles.tableContainer}>
         <table className={`${styles.table} ${styles.responsiveTable}`}>
           <thead>
@@ -319,7 +319,7 @@ const ipoPage = async ({ params }) => {
           </tbody>
         </table>
         </div>
-        <h3 className={styles.responsiveHeading}>IPO Prospectus :-</h3>
+        <h2 className={styles.responsiveHeading}>IPO Prospectus :-</h2>
         <div className={styles.tableContainer}>
         <table className={`${styles.table} ${styles.responsiveTable}`}>
           <tbody>
@@ -334,12 +334,12 @@ const ipoPage = async ({ params }) => {
           </tbody>
         </table>
         </div>
-        <h3 className={styles.responsiveHeading}>{data.company} Contact Details :-</h3>
+        <h2 className={styles.responsiveHeading}>{data.company} Contact Details :-</h2>
         <p className={styles.responsiveParagraph}>Address:- {data.contactaddress}</p>
         <p className={styles.responsiveParagraph}>Phone:- {data.contactphone}</p>
         <p className={styles.responsiveParagraph}>E-mail:- {data.contactemail}</p>
         <p className={styles.responsiveParagraph}>Website:- {data.contactwebsite}</p>
-        <h3>IPO Registrar :-</h3>
+        <h2>IPO Registrar :-</h2>
         <p className={styles.responsiveParagraph}>Address:- {data.registraraddress}</p>
         <p className={styles.responsiveParagraph}>Phone:- {data.registrarphone}</p>
         <p className={styles.responsiveParagraph}>E-mail:- {data.registraremail}</p>
