@@ -23,6 +23,12 @@
   overflow-x: auto;
 }
 
-.post p{
-  margin: 10px;
+.post p {
+ margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.post h2, h3, h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
