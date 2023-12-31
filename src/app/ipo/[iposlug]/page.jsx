@@ -6,7 +6,7 @@ import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 
 const getData = async (iposlug) => {
-  const res = await fetch(`http://localhost:3000/api/ipopost/${iposlug}`, {
+  const res = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`, {
     cache: "no-store",
   });
 
