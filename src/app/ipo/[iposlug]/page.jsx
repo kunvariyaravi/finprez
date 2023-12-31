@@ -33,6 +33,7 @@ const ipoPage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
+      <div className={styles.wrapper}>
       <h2 className={styles.title}>{data?.title}</h2>
       <div className={styles.content}>
         <div className={styles.post}>
@@ -339,6 +340,7 @@ const ipoPage = async ({ params }) => {
           <h3 className={styles.h3m}>{data.company} GMP :-</h3>
           <div className={styles.comment}>
             <Comments postSlug={iposlug} />
+          </div>
           </div>
         </div>
         <Menu />
