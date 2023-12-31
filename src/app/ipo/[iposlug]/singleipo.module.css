@@ -28,7 +28,10 @@
   margin-bottom: 15px;
 }
 
-.post h2, h3, h4 {
+.post h2,
+.post h3,
+.post h4 {
+  /* Your styles here */
   margin-top: 15px;
   margin-bottom: 15px;
 }
