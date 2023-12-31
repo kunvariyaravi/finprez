@@ -30,26 +30,3 @@
   color: white;
 }
 
-.content {
-  padding-left: 200px;
-  padding-right: 200px;
-}
-
-@media screen and (max-width: 1024px) {
-  .content {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .content {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-@media screen and (max-width: 640px) {
-  .content {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
