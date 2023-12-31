@@ -47,3 +47,9 @@
     left: 6px;
   }
 }
+
+/* Table container styles */
+.tableContainer {
+  margin-top: 20px;
+  overflow-x: auto;
+}
