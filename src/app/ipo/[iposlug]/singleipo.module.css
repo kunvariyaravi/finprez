@@ -1,32 +1,47 @@
+/* ipo.module.css */
+
+/* General table styles */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
 .tableCell {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
 }
 
-/* Responsive styles for smaller screens */
+/* Responsive table styles */
 @media (max-width: 600px) {
-  .tableCell {
-    padding: 4px;
+  .responsiveTable {
+    overflow-x: auto;
+    display: block;
   }
-}
 
-.responsiveHeading {
-  font-size: 1.5rem; /* Adjust the font size as needed */
-}
+  .table thead {
+    display: none;
+  }
 
-.responsiveTable {
-  width: 100%;
-  margin-bottom: 1rem; /* Adjust spacing as needed */
-}
+  .table tbody, .table tr, .table th, .table td {
+    display: block;
+    width: 100%;
+  }
 
-.responsiveTable th,
-.responsiveTable td {
-  padding: 8px;
-  text-align: center;
-}
+  .table td {
+    text-align: left;
+  }
 
-.responsiveParagraph {
-  font-size: 0.9rem; /* Adjust the font size as needed */
-  line-height: 1.4;
+  .table tr {
+    margin-bottom: 10px;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: inline-block;
+    width: 50%;
+    margin-bottom: 5px;
+  }
 }
