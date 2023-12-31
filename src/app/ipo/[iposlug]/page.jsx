@@ -135,7 +135,7 @@ const ipoPage = async ({ params }) => {
         </table>
         <h3 className={styles.responsiveHeading}>Financial Information :-</h3>
         <p className={styles.responsiveParagraph}>Amount in ₹ {data.amountin}</p>
-        <table className={`${styles.table} ${styles.responsiveTable}`}>
+        <table className={styles.table}>
           <thead>
             <tr>
               <th className={styles.tableCell}>Period Ended</th>
