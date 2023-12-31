@@ -16,7 +16,7 @@ export default function Home({ searchParams }) {
       <IpoList></IpoList>
       <div className={styles.content}>
         <CardList page={page}/>
-        <Menu />
+        {/* <Menu /> */}
       </div>
     </div>
   );
