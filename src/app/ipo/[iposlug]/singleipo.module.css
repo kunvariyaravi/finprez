@@ -2,7 +2,7 @@
 
 /* General table styles */
 .table {
-  width: 100%;
+  /* width: 100%; */
   border-collapse: collapse;
   margin-bottom: 20px;
   overflow-x: auto;
@@ -23,12 +23,6 @@
   overflow-x: auto;
 }
 
-.content {
-  display: flex;
-  gap: 50px;
-}
-
-.post {
-  flex: 5;
-  margin-top: 60px;
+.post p{
+  margin: 10px;
 }
