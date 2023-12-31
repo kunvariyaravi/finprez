@@ -21,21 +21,29 @@
   }
 
   .table thead {
-    display: none;
+    display: block;
   }
 
   .table tbody, .table tr, .table th, .table td {
-    display: flex;
-    flex-direction: column;
+    display: block;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  .table td {
+    text-align: left;
+    padding: 8px;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    position: relative;
   }
 
   .table td::before {
     content: attr(data-label);
     font-weight: bold;
-    display: block;
-    width: 100%;
-    margin-bottom: 5px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
   }
 }
