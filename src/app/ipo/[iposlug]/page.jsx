@@ -133,6 +133,7 @@ const ipoPage = async ({ params }) => {
           </table>
           <h3 className={styles.h3m}>Financial Information :-</h3>
           <p className={styles.pm}>Amount in ₹ {data.amountin}</p>
+          <div className={styles.tableContainer}>
           <table className={styles.table}>
             <thead>
               <tr>
@@ -188,7 +189,9 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
+          </div>
           <h3 className={styles.h3m}>{data.title} Lot Information :-</h3>
+          <div className={styles.tableContainer}>
           <table className={styles.table}>
             <thead>
               <tr>
@@ -231,7 +234,9 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
+          </div>
           <h3 className={styles.h3m}>Key Performance Indicator :-</h3>
+          <div className={styles.tableContainer}>
           <table className={styles.table}>
             <tbody>
               <tr>
@@ -264,7 +269,9 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
+          </div>
           <h3 className={styles.h3m}>{data.title} Subscription Status :-</h3>
+          <div className={styles.tableContainer}>
           <table className={styles.table}>
             <thead>
               <tr>
@@ -303,7 +310,9 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
+          </div>
           <h3 className={styles.h3m}>IPO Prospectus :-</h3>
+          <div className={styles.tableContainer}>
           <table className={styles.table}>
             <tbody>
               <tr>
@@ -316,6 +325,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
+          </div>
           <h3 className={styles.h3m}>{data.company} Contact Details :-</h3>
           <p className={styles.pm}>Address:- {data.contactaddress}</p>
           <p className={styles.pm}>Phone:- {data.contactphone}</p>
