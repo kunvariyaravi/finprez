@@ -5,6 +5,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  overflow-x: auto; /* Add horizontal scroll for larger tables */
 }
 
 .tableCell {
@@ -27,6 +28,7 @@
   .table tbody, .table tr, .table th, .table td {
     display: block;
     width: 100%;
+    box-sizing: border-box; /* Maintain padding and border-box behavior */
   }
 
   .table td {
