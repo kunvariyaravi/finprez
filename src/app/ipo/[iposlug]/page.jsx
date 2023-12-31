@@ -6,7 +6,7 @@ import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 
 const getData = async (iposlug) => {
-  const res = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`, {
+  const res = await fetch(`http://localhost:3000/api/ipopost/${iposlug}`, {
     cache: "no-store",
   });
 
@@ -32,16 +32,16 @@ const ipoPage = async ({ params }) => {
   const data = await getData(iposlug);
 
   return (
-    <div>
-      <h2>{data?.title}</h2>
-      <div>
-        <div>
-          <div />
-          <p>
-          {data.title} bidding starts from {formatDate(data.opendate)} and ends on {formatDate(data.closedate)}. The allotment for the {data.title} is expected to be finalized on {formatDate(data.allotmentdate)}. {data.title} will list on {data.listingat} with tentative listing date fixed as {formatDate(data.listingdate)}. {data.title} price band is set at {data.price} per share. The minimum lot size for an application is {data.lot} Shares. The minimum amount of investment required by retail investors is {data.rminamount}.</p>
-          <h3>About {data.company} :-</h3>
-          <p>{data.description}</p>
-          <h3>{data.title} Details :-</h3>
+    <div className={styles.container}>
+      <h2 className={styles.title}>{data?.title}</h2>
+      <div className={styles.content}>
+        <div className={styles.post}>
+          <div className={styles.description} />
+          <p className={styles.pm}>
+          {data.title} bidding starts from {formatDate(data.opendate)} and ends on {formatDate(data.closedate)}. The allotment for the {data.title} is expected to be finalized on {formatDate(data.allotmentdate)}. {data.title} will list on {data.listingat} with tentative listing date fixed as {formatDate(data.listingdate)}. {data.title} price band is set at {data.price} per share. The minimum lot size for an application is {data.lot} Shares. The minimum amount of investment required by retail investors is ₹{data.rminamount}.</p>
+          <h3 className={styles.h3m}>About {data.company} :-</h3>
+          <p className={styles.pm}>{data.description}</p>
+          <h3 className={styles.h3m}>{data.title} Details :-</h3>
           <table className={styles.table}>
             <tbody>
               <tr>
@@ -102,7 +102,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3>Important Dates:-</h3>
+          <h3 className={styles.h3m}>Important Dates:-</h3>
           <table className={styles.table}>
             <tbody>
               <tr>
@@ -131,7 +131,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3>Financial Information :-</h3>
+          <h3 className={styles.h3m}>Financial Information :-</h3>
           <p className={styles.pm}>Amount in ₹ {data.amountin}</p>
           <table className={styles.table}>
             <thead>
@@ -188,7 +188,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3>{data.title} Lot Information :-</h3>
+          <h3 className={styles.h3m}>{data.title} Lot Information :-</h3>
           <table className={styles.table}>
             <thead>
               <tr>
@@ -218,7 +218,7 @@ const ipoPage = async ({ params }) => {
                 <td className={styles.tableCell}>{data.sminamount}</td>
               </tr>
               <tr>
-                <td className={styles.tableCell}>(S-HNI Maximum)</td>
+                <td className={styles.tableCell}>S-HNI (Maximum)</td>
                 <td className={styles.tableCell}>{data.smaxlot}</td>
                 <td className={styles.tableCell}>{data.smaxshares}</td>
                 <td className={styles.tableCell}>{data.smaxamount}</td>
@@ -231,7 +231,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3>Key Performance Indicator :-</h3>
+          <h3 className={styles.h3m}>Key Performance Indicator :-</h3>
           <table className={styles.table}>
             <tbody>
               <tr>
@@ -264,7 +264,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3>{data.title} Subscription Status :-</h3>
+          <h3 className={styles.h3m}>{data.title} Subscription Status :-</h3>
           <table className={styles.table}>
             <thead>
               <tr>
@@ -303,7 +303,7 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3>IPO Prospectus :-</h3>
+          <h3 className={styles.h3m}>IPO Prospectus :-</h3>
           <table className={styles.table}>
             <tbody>
               <tr>
@@ -316,22 +316,22 @@ const ipoPage = async ({ params }) => {
               </tr>
             </tbody>
           </table>
-          <h3>{data.company} Contact Details :-</h3>
-          <p>Address:- {data.contactaddress}</p>
-          <p>Phone:- {data.contactphone}</p>
-          <p>E-mail:- {data.contactemail}</p>
-          <p>Website:- {data.contactwebsite}</p>
-          <h3>IPO Registrar :-</h3>
-          <p>Address:- {data.registraraddress}</p>
-          <p>Phone:- {data.registrarphone}</p>
-          <p>E-mail:- {data.registraremail}</p>
-          <p>Website:- {data.registrarwebsite}</p>
-          <h3>{data.company} GMP :-</h3>
+          <h3 className={styles.h3m}>{data.company} Contact Details :-</h3>
+          <p className={styles.pm}>Address:- {data.contactaddress}</p>
+          <p className={styles.pm}>Phone:- {data.contactphone}</p>
+          <p className={styles.pm}>E-mail:- {data.contactemail}</p>
+          <p className={styles.pm}>Website:- {data.contactwebsite}</p>
+          <h3 className={styles.h3m}>IPO Registrar :-</h3>
+          <p className={styles.pm}>Address:- {data.registraraddress}</p>
+          <p className={styles.pm}>Phone:- {data.registrarphone}</p>
+          <p className={styles.pm}>E-mail:- {data.registraremail}</p>
+          <p className={styles.pm}>Website:- {data.registrarwebsite}</p>
+          <h3 className={styles.h3m}>{data.company} GMP :-</h3>
           <div className={styles.comment}>
             <Comments postSlug={iposlug} />
           </div>
         </div>
-        {/* <Menu /> */}
+        <Menu />
       </div>
     </div>
   );

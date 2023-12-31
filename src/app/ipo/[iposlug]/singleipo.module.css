@@ -80,13 +80,11 @@
 
 .tableContainer {
   margin-top: 20px;
-  overflow-x: auto;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  overflow-x: auto;
 }
 
 .tableCell {
@@ -102,3 +100,4 @@
   background-color: orange;
   color: white;
 }
+
