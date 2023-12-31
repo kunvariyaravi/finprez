@@ -58,7 +58,7 @@ const IpoList = async () => {
 
   return (
     <div className={styles.tableContainer}>
-      <h2 className={styles.title}>Latest IPO in India</h2>
+      <h2>Latest IPO in India</h2>
       <table className={styles.table}>
         <thead>
           <tr>
