@@ -7,7 +7,9 @@ export async function GET() {
 
   try {
     console.log('Querying data from MongoDB...');
-    const data = await prisma.ipopost.findMany();
+    const data = await prisma.ipopost.findMany({
+      take:10
+    });
 
     console.log('Found data:', data);
 
