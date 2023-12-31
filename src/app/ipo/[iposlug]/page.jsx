@@ -34,6 +34,7 @@ const ipoPage = async ({ params }) => {
   return (
     <div>
       <div className={styles.content}>
+        <div className={styles.post}>
         <h1>{data?.title}</h1>
         <div>
           <p className={styles.responsiveParagraph}>
@@ -381,7 +382,8 @@ const ipoPage = async ({ params }) => {
             <Comments postSlug={iposlug} />
           </div>
         </div>
-        <Menu />
+        </div>
+        {/* <Menu /> */}
       </div>
     </div>
   );
