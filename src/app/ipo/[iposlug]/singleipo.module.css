@@ -22,3 +22,13 @@
   margin-top: 20px;
   overflow-x: auto;
 }
+
+.content {
+  display: flex;
+  gap: 50px;
+}
+
+.post {
+  flex: 5;
+  margin-top: 60px;
+}
