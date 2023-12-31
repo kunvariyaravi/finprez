@@ -35,7 +35,7 @@ const ipoPage = async ({ params }) => {
     <div>
       <div className={styles.content}>
         <div className={styles.post}>
-      <h2>{data?.title}</h2>
+      <h1>{data?.title}</h1>
       <div>
         <p className={styles.responsiveParagraph}>
           {data.title} bidding starts from {formatDate(data.opendate)} and ends
@@ -47,9 +47,9 @@ const ipoPage = async ({ params }) => {
           is {data.lot} Shares. The minimum amount of investment required by
           retail investors is ₹{data.rminamount}.
         </p>
-        <h3 className={styles.responsiveHeading}>About {data.company} :-</h3>
+        <h2 className={styles.responsiveHeading}>About {data.company} :-</h2>
         <p className={styles.responsiveParagraph}>{data.description}</p>
-        <h3 className={styles.responsiveHeading}>{data.title} Details :-</h3>
+        <h2 className={styles.responsiveHeading}>{data.title} Details :-</h2>
         <div className={styles.tableContainer}>
         <table className={`${styles.table} ${styles.responsiveTable}`}>
           <tbody>

@@ -25,7 +25,7 @@ const SinglePage = async ({ params }) => {
   return (
     <div className={styles.container}>
       <div className={styles.textContainer}>
-        <h2 className={styles.title}>{data?.title}</h2>
+        <h1 className={styles.title}>{data?.title}</h1>
         <div className={styles.user}>
           {data?.user?.image && (
             <div className={styles.userImageContainer}>
