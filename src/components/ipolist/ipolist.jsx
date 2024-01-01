@@ -70,6 +70,7 @@ const IpoList = async () => {
             <th className={styles.thCell}>GMP</th>
             <th className={styles.thCell}>Allotment Date</th>
             <th className={styles.thCell}>Listing Date</th>
+            <th className={styles.thCell}>IPO Type</th>
             <th className={styles.thCell}>Status</th>
           </tr>
         </thead>
@@ -88,6 +89,7 @@ const IpoList = async () => {
               <td className={styles.tableCell}>{item.gmp}</td>
               <td className={styles.tableCell}>{formatDate(item.allotmentdate)}</td>
               <td className={styles.tableCell}>{formatDate(item.listingdate)}</td>
+              <td className={styles.tableCell}>{item.ipotype}</td>
               <td className={styles.tableCell}>
                 {getIPOStatus(item.opendate, item.closedate)}
               </td>
