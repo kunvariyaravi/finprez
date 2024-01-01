@@ -27,6 +27,7 @@
  margin-top: 15px;
   margin-bottom: 15px;
   text-align: justify;
+  text-wrap: wrap;
 }
 
 .post h2,
