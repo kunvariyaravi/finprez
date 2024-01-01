@@ -309,7 +309,7 @@ const ipoPage = async ({ params }) => {
               <tbody>
                 <tr>
                   <td className={styles.tableCell}>Day 1</td>
-                  <td className={styles.tableCell}>{data.subdate1}</td>
+                  <td className={styles.tableCell}>{formatDate(data.subdate1)}</td>
                   <td className={styles.tableCell}>{data.subqib1}</td>
                   <td className={styles.tableCell}>{data.subnii1}</td>
                   <td className={styles.tableCell}>{data.subretail1}</td>
@@ -317,7 +317,7 @@ const ipoPage = async ({ params }) => {
                 </tr>
                 <tr>
                   <td className={styles.tableCell}>Day 2</td>
-                  <td className={styles.tableCell}>{data.subdate2}</td>
+                  <td className={styles.tableCell}>{formatDate(data.subdate2)}</td>
                   <td className={styles.tableCell}>{data.subqib2}</td>
                   <td className={styles.tableCell}>{data.subnii2}</td>
                   <td className={styles.tableCell}>{data.subretail2}</td>
@@ -325,7 +325,7 @@ const ipoPage = async ({ params }) => {
                 </tr>
                 <tr>
                   <td className={styles.tableCell}>Day 3</td>
-                  <td className={styles.tableCell}>{data.subdate3}</td>
+                  <td className={styles.tableCell}>{formatDate(data.subdate3)}</td>
                   <td className={styles.tableCell}>{data.subqib3}</td>
                   <td className={styles.tableCell}>{data.subnii3}</td>
                   <td className={styles.tableCell}>{data.subretail3}</td>
