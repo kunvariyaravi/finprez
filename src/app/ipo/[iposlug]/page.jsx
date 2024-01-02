@@ -49,7 +49,7 @@ const ipoPage = async ({ params }) => {
             retail investors is ₹{data.rminamount}.
           </p>
           <h2 className={styles.responsiveHeading}>About {data.company} :-</h2>
-          <p className={styles.responsiveParagraph}>{data.description}</p>
+          <div className={styles.responsiveParagraph}>{data.description}</div>
           <h2 className={styles.responsiveHeading}>{data.title} Details :-</h2>
           <div className={styles.tableContainer}>
             <table className={`${styles.table} ${styles.responsiveTable}`}>
