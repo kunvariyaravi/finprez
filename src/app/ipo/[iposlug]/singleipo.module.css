@@ -61,3 +61,15 @@
     padding-right: 0px;
   }
 }
+
+.imageContainer {
+  flex: 1;
+  height: 600px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 30px;
+}

@@ -36,6 +36,9 @@ const ipoPage = async ({ params }) => {
       <div className={styles.content}>
         <div className={styles.post}>
         <h1>{data?.title}</h1>
+        <div className={styles.imageContainer}>
+          <Image src={data.img} alt={data.title} fill className={styles.image} />
+        </div>
         <div>
           <p className={styles.responsiveParagraph}>
             {data.title} bidding starts from {formatDate(data.opendate)} and
