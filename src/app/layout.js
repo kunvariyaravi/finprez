@@ -12,7 +12,7 @@ const lexend = Lexend({ subsets: ["latin"] });
 export const metadata = {
   title: "FinPrez",
   description: "FinPrez provides the latest stock market, IPO, financial and business news. Get personal finance advice, company news and more",
-  image: "https://firebasestorage.googleapis.com/v0/b/finprez-61922.appspot.com/o/opengraph-image.png?alt=media&token=499ec5ab-598b-4640-9558-8a52486e3673",
+  // image: "https://firebasestorage.googleapis.com/v0/b/finprez-61922.appspot.com/o/opengraph-image.png?alt=media&token=499ec5ab-598b-4640-9558-8a52486e3673",
 };
 
 export default function RootLayout({ children }) {
