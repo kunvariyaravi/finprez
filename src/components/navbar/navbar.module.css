@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: space-between;
     height: 100px;
+    border-bottom: solid 2px;
   }
   
   .social {
@@ -20,6 +21,7 @@
   .links {
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 20px;
     flex: 1;
     font-size: 20px;
