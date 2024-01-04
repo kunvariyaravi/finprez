@@ -108,16 +108,15 @@ model Ipopost {
 
   price            String?
   lot              Int?
-  gmp              Int?
+  gmp              Float?
   listingat        String?
-  totalissueshares Int?
+  totalissueshares String?
   totalissuesize   String?
-  freshissueshares Int?
+  freshissueshares String?
   freshissuesize   String?
-  ofsissueshares   Int?
+  ofsissueshares   String?
   ofsissuesize     String?
   facevalue        String?
-  minamount        String?
   retailquota      Int?
   qibquota         Int?
   niiquota         Int?
@@ -127,30 +126,30 @@ model Ipopost {
   t2          String?
   t3          String?
   t4          String?
-  t1assets    Float?
-  t2assets    Float?
-  t3assets    Float?
-  t4assets    Float?
-  t1revenue   Float?
-  t2revenue   Float?
-  t3revenue   Float?
-  t4revenue   Float?
-  t1pat       Float?
-  t2pat       Float?
-  t3pat       Float?
-  t4pat       Float?
-  t1nw        Float?
-  t2nw        Float?
-  t3nw        Float?
-  t4nw        Float?
-  t1ressur    Float?
-  t2ressur    Float?
-  t3ressur    Float?
-  t4ressur    Float?
-  t1borrowing Float?
-  t2borrowing Float?
-  t3borrowing Float?
-  t4borrowing Float?
+  t1assets    String?
+  t2assets    String?
+  t3assets    String?
+  t4assets    String?
+  t1revenue   String?
+  t2revenue   String?
+  t3revenue   String?
+  t4revenue   String?
+  t1pat       String?
+  t2pat       String?
+  t3pat       String?
+  t4pat       String?
+  t1nw        String?
+  t2nw        String?
+  t3nw        String?
+  t4nw        String?
+  t1ressur    String?
+  t2ressur    String?
+  t3ressur    String?
+  t4ressur    String?
+  t1borrowing String?
+  t2borrowing String?
+  t3borrowing String?
+  t4borrowing String?
   amountin    String?
 
   // Lot Information
@@ -171,30 +170,30 @@ model Ipopost {
   bminamount Int?
 
   // Key Performance Indicator
-  pe           Float?
-  mcap         Float?
+  pe           String?
+  mcap         String?
   roe          String?
   roce         String?
-  debttoequity Float?
-  eps          Float?
+  debttoequity String?
+  eps          String?
   ronw         String?
 
   // Subscription Status
-  subdate1   DateTime?
-  subqib1    Float?
-  subnii1    Float?
-  subretail1 Float?
-  subtotal1  Float?
-  subdate2   DateTime?
-  subqib2    Float?
-  subnii2    Float?
-  subretail2 Float?
-  subtotal2  Float?
-  subdate3   DateTime?
-  subqib3    Float?
-  subnii3    Float?
-  subretail3 Float?
-  subtotal3  Float?
+  subdate1   String?
+  subqib1    String?
+  subnii1    String?
+  subretail1 String?
+  subtotal1  String?
+  subdate2   String?
+  subqib2    String?
+  subnii2    String?
+  subretail2 String?
+  subtotal2  String?
+  subdate3   String?
+  subqib3    String?
+  subnii3    String?
+  subretail3 String?
+  subtotal3  String?
 
   // Contact Details
   contactaddress String?

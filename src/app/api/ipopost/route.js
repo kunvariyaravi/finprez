@@ -6,15 +6,12 @@ export async function GET() {
   const prisma = new PrismaClient();
 
   try {
-    console.log('Querying data from MongoDB...');
     const data = await prisma.ipopost.findMany({
-      take:10
+      take:20
     });
 
     return NextResponse.json({ result: data, success: true });
   } catch (error) {
-    console.error('Error querying data from MongoDB:', error);
-
     return NextResponse.json({ success: false, error: error.message });
   } 
 }
