@@ -6,7 +6,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET() {
   try {
-    // Use await to ensure PrismaClient instance is fully initialized
+
     const data = await prisma.ipopost.findMany({
       take: 20,
     });
