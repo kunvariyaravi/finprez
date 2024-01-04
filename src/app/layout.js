@@ -6,13 +6,14 @@ import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import AuthProvider from "@/providers/AuthProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Image from "next/image";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
 export const metadata = {
   title: "FinPrez",
   description: "FinPrez provides the latest stock market, IPO, financial and business news. Get personal finance advice, company news and more",
-  Image: "/opengraph-image.jpg"
+  image: "/opengraph-image.jpg"
 };
 
 export default function RootLayout({ children }) {
