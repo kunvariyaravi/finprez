@@ -57,8 +57,10 @@ const IpoList = async () => {
   const posts = await getData();
 
   return (
-    <div className={styles.tableContainer}>
+    <div>
       <h1 className={styles.title}>Latest IPO in India</h1>
+    <div className={styles.tableContainer}>
+      
       <table className={styles.table}>
         <thead>
           <tr>
@@ -97,6 +99,7 @@ const IpoList = async () => {
           ))}
         </tbody>
       </table>
+    </div>
     </div>
   );
 };
