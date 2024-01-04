@@ -35,7 +35,7 @@ const ipoPage = async ({ params }) => {
     <div>
       <div className={styles.content}>
         <div className={styles.post}>
-        <h1>{data?.title}</h1>
+        <h1 className={styles.title}>{data?.title}</h1>
         <div className={styles.imageContainer}>
           <Image src={data.img} alt={data.title} fill className={styles.image} />
         </div>

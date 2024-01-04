@@ -1,5 +1,10 @@
 /* ipo.module.css */
 
+.title {
+  align-items: center;
+  margin-top: 15px;
+}
+
 /* General table styles */
 .table {
   width: 100%;
