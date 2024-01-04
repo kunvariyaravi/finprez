@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client';
+import prisma from "@/utils/connect";
 import { NextResponse } from 'next/server';
 
 // Create a single PrismaClient instance and reuse it
