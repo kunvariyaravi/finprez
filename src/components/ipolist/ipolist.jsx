@@ -6,7 +6,7 @@ import Link from "next/link";
 const getData = async () => {
   try {
     const res = await fetch("https://www.finprez.com/api/ipopost", {
-      // cache: "no-store",
+      cache: "no-store",
     });
 
     if (!res.ok) {

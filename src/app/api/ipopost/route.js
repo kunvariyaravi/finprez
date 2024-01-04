@@ -2,7 +2,7 @@ import { PrismaClient } from '@prisma/client';
 import { NextResponse } from 'next/server';
 
 // Create a single PrismaClient instance and reuse it
-const prisma = new PrismaClient();
+// const prisma = new PrismaClient();
 
 export async function GET() {
   try {
