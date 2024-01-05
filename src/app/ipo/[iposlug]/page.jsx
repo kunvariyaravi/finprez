@@ -5,7 +5,23 @@ import styles from "./singleipo.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 
-
+export async function generateMetadata({ params, searchParams }, parent) {
+  // read route params
+  const iposlug = params.iposlug
+ 
+  // fetch data
+  const ipopost = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`).then((res) => res.json())
+ 
+  // optionally access and extend (rather than replace) parent metadata
+  // const previousImages = (await parent).openGraph?.images || []
+ 
+  return {
+    title: ipopost.title,
+    // openGraph: {
+    //   images: ['/some-specific-page-image.jpg', ...previousImages],
+    // },
+  }
+}
 
 const getData = async (iposlug) => {
   const res = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`, {
@@ -19,22 +35,9 @@ const getData = async (iposlug) => {
   return res.json();
 };
 
-async function generateMetadata({ iposlug} ) {
-  const post = await getData(iposlug);
 
-  return {
-    title: post.title,
-    description: post.company,
-    openGraph: {
-      images: [
-        {
-          url: post.img
-        }
-      ]
-    }
-  };
-}
-  
+ 
+export default function Page({ params, searchParams }) {}  
 const formatDate = (dateString) => {
   const options = { year: "numeric", month: "2-digit", day: "2-digit" };
   const formattedDate = new Date(dateString).toLocaleDateString(
