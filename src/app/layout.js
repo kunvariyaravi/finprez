@@ -6,7 +6,6 @@ import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import AuthProvider from "@/providers/AuthProvider";
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import Image from "next/image";
 
 const lexend = Lexend({ subsets: ["latin"] });
 
