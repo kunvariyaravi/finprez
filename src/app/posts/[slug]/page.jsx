@@ -1,3 +1,5 @@
+// "use client"
+
 import Menu from "@/components/Menu/Menu";
 import styles from "./singlePage.module.css";
 import Image from "next/image";
@@ -16,19 +18,23 @@ const getData = async (slug) => {
   return res.json();
 };
 
-const SinglePage = ({ data }) => {
+const SinglePage = async ({ params }) => {
+  const { slug } = params;
+
+  const data = await getData(slug);
+
+  // Set dynamic metadata
+  const pageTitle = data?.title;
+  const pageDescription = data?.description..substring(0, 60); // replace with the actual property in your data
+
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>{data?.title}</title>
-        <meta name="description" content={data?.desc.substring(0, 60)} />
-        <meta property="og:title" content={data?.title} />
-        <meta property="og:description" content={data?.desc.substring(0, 60)} />
-        <meta property="og:image" content={data?.img} />
-        <meta name="twitter:title" content={data?.title} />
-        <meta name="twitter:description" content={data?.desc.substring(0, 60)} />
-        <meta name="twitter:image" content={data?.img} />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        {/* Add other metadata as needed */}
       </Head>
+    <div className={styles.container}>
       <div className={styles.textContainer}>
         <h1 className={styles.title}>{data?.title}</h1>
         <div className={styles.user}>
@@ -69,23 +75,8 @@ const SinglePage = ({ data }) => {
         <Menu />
       </div>
     </div>
+    </>
   );
 };
-
-export async function getServerSideProps({ params }) {
-  const { slug } = params;
-
-  try {
-    const data = await getData(slug);
-    return {
-      props: { data },
-    };
-  } catch (error) {
-    console.error('Error fetching data:', error);
-    return {
-      notFound: true,
-    };
-  }
-}
 
 export default SinglePage;
