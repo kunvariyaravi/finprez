@@ -5,26 +5,6 @@ import styles from "./singleipo.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 
-async function generateMetadata({ iposlug} ) {
-  const response = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`);
-  const post = await response.json();
-
-  return {
-    title: post.title,
-    description: post.company,
-    openGraph: {
-      images: [
-        {
-          url: post.img
-        }
-      ]
-    }
-  };
-}
-
-generateMetadata()
-  .then(metadata => console.log(metadata))
-  .catch(error => console.error(error));
 
 
 const getData = async (iposlug) => {
@@ -39,6 +19,26 @@ const getData = async (iposlug) => {
   return res.json();
 };
 
+async function generateMetadata({ iposlug} ) {
+  const post = await getData(iposlug);
+
+  return {
+    title: post.title,
+    description: post.company,
+    openGraph: {
+      images: [
+        {
+          url: post.img
+        }
+      ]
+    }
+  };
+}
+
+const metadata = await generateMetadata({ iposlug });
+generateMetadata()
+  console.log(metadata)
+  
 const formatDate = (dateString) => {
   const options = { year: "numeric", month: "2-digit", day: "2-digit" };
   const formattedDate = new Date(dateString).toLocaleDateString(
