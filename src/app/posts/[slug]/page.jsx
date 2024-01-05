@@ -26,8 +26,8 @@ const SinglePage = async ({ params }) => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{data?.title}</title>
-        <meta name="description" content={data?.desc.substring(0,60)} />
+        <title>{data.title}</title>
+        <meta name="description" content={data.desc.substring(0,60)} />
         <meta property="og:title" content={data?.title} />
         <meta property="og:description" content={data?.desc.substring(0,60)} />
         <meta property="og:image" content={data?.img} />
