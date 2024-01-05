@@ -25,16 +25,19 @@ const SinglePage = async ({ params }) => {
 
   // Set dynamic metadata
   const pageTitle = data?.title;
-  const pageDescription = data?.description..substring(0, 60); // replace with the actual property in your data
+  const pageDescription = data?.description; // replace with the actual property in your data
+  const pageImage=data?.img;
 
   return (
-    <>
+
+    <div className={styles.container}>
       <Head>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
-        {/* Add other metadata as needed */}
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={pageImage} />
       </Head>
-    <div className={styles.container}>
       <div className={styles.textContainer}>
         <h1 className={styles.title}>{data?.title}</h1>
         <div className={styles.user}>
@@ -75,7 +78,6 @@ const SinglePage = async ({ params }) => {
         <Menu />
       </div>
     </div>
-    </>
   );
 };
 

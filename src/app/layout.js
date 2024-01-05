@@ -13,7 +13,7 @@ const lexend = Lexend({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <meta property="og:title" content="FinPrez" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.finprez.com/" />
@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
           content="https://www.finprez.com/opengraph-image.jpg"
         />
         <meta property="og:description" content="FinPrez provides the latest stock market, IPO, financial and business news. Get personal finance advice, company news and more" />
-      </head>
+      </Head>
       <body className={lexend.className}>
         <AuthProvider>
           <ThemeContextProvider>
