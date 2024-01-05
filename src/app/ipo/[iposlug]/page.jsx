@@ -3,7 +3,8 @@
 import Menu from "@/components/Menu/Menu";
 import styles from "./singleipo.module.css";
 import Image from "next/image";
-import Comments from "@/components/comments/Comments";z
+import Comments from "@/components/comments/Comments";
+
 
 const getData = async (iposlug) => {
   const res = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`, {
