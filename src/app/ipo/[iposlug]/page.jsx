@@ -22,7 +22,7 @@ async function generateMetadata({ params: { iposlug } }) {
   };
 }
 
-generateMetadata({ params: { iposlug } })
+generateMetadata()
   .then(metadata => console.log(metadata))
   .catch(error => console.error(error));
 
