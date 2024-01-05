@@ -11,7 +11,7 @@ async function generateMetadata({ params: { iposlug } }) {
 
   return {
     title: post.title,
-    description: post.body,
+    description: post.company,
     openGraph: {
       images: [
         {
@@ -22,9 +22,9 @@ async function generateMetadata({ params: { iposlug } }) {
   };
 }
 
-// generateMetadata({ params: { postId: 123 } })
-//   .then(metadata => console.log(metadata))
-//   .catch(error => console.error(error));
+generateMetadata({ params: { iposlug } })
+  .then(metadata => console.log(metadata))
+  .catch(error => console.error(error));
 
 
 const getData = async (iposlug) => {
