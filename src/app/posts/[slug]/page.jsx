@@ -33,7 +33,7 @@ const SinglePage = async ({ params }) => {
         <meta property="og:image" content={data?.img} />
         {/* <meta property="og:url" content={data?.url} /> */}
         <meta name="twitter:title" content={data?.title} />
-        <meta name="twitter:description" content={data?desc.substring(0,60)} />
+        <meta name="twitter:description" content={data?.desc.substring(0,60)} />
         <meta name="twitter:image" content={data?.img} />
       </Head>
       <div className={styles.textContainer}>
