@@ -5,6 +5,28 @@ import styles from "./singleipo.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 
+async function generateMetadata({ params: { iposlug } }) {
+  const response = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`);
+  const post = await response.json();
+
+  return {
+    title: post.title,
+    description: post.body,
+    openGraph: {
+      images: [
+        {
+          url: post.img
+        }
+      ]
+    }
+  };
+}
+
+// generateMetadata({ params: { postId: 123 } })
+//   .then(metadata => console.log(metadata))
+//   .catch(error => console.error(error));
+
+
 const getData = async (iposlug) => {
   const res = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`, {
     cache: "no-store",
