@@ -34,10 +34,6 @@ async function generateMetadata({ iposlug} ) {
     }
   };
 }
-
-const metadata = await generateMetadata({ iposlug });
-generateMetadata()
-  console.log(metadata)
   
 const formatDate = (dateString) => {
   const options = { year: "numeric", month: "2-digit", day: "2-digit" };
