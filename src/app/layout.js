@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta property="og:title" content="FinPrez" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.example.com/" />
+        <meta property="og:url" content="https://www.finprez.com/" />
         <meta
           property="og:image"
           content="https://www.finprez.com/opengraph-image.jpg"

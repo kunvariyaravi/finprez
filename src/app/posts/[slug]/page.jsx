@@ -4,6 +4,7 @@ import Menu from "@/components/Menu/Menu";
 import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
+import Head from 'next/head';
 
 const getData = async (slug) => {
   const res = await fetch(`https://www.finprez.com/api/posts/${slug}`, {
@@ -24,6 +25,17 @@ const SinglePage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>{data?.title}</title>
+        <meta name="description" content={data?.desc.substring(0,60)} />
+        <meta property="og:title" content={data?.title} />
+        <meta property="og:description" content={data?.desc.substring(0,60)} />
+        <meta property="og:image" content={data?.img} />
+        {/* <meta property="og:url" content={data?.url} /> */}
+        <meta name="twitter:title" content={data?.title} />
+        <meta name="twitter:description" content={data?desc.substring(0,60)} />
+        <meta name="twitter:image" content={data?.img} />
+      </Head>
       <div className={styles.textContainer}>
         <h1 className={styles.title}>{data?.title}</h1>
         <div className={styles.user}>
