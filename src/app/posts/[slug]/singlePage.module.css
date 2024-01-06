@@ -10,13 +10,17 @@
   
   .title {
     font-size: 64px;
-    margin-bottom: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-align: center;
   }
   
   .user {
     display: flex;
     align-items: center;
     gap: 20px;
+    margin-top: 25px;
+    /* margin-bottom: 15px; */
   }
   
   .userImageContainer {
@@ -61,7 +65,7 @@
   
   .post {
     flex: 5;
-    margin-top: 60px;
+    margin-top: 15px;
   }
   
   .description p {
