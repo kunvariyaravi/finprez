@@ -1,8 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    images:{
-      domains:["lh3.googleusercontent.com","firebasestorage.googleapis.com"]
-    }
-  }
-  
-  module.exports = nextConfig
+// next.config.js
+const metadataBase = 'https://www.finprez.com';
+
+module.exports = {
+ reactStrictMode: true,
+ images: {
+    domains: ["lh3.googleusercontent.com", "firebasestorage.googleapis.com"],
+ },
+ metadata: {
+    metadataBase,
+ },
+};
