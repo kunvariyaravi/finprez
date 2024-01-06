@@ -4,7 +4,7 @@ const metadataBase = 'https://www.finprez.com';
 module.exports = {
  reactStrictMode: true,
  images: {
-    domains: ["lh3.googleusercontent.com", "firebasestorage.googleapis.com"],
+    domains: ["lh3.googleusercontent.com", "firebasestorage.googleapis.com","https://www.finprez.com"],
  },
  metadata: {
     metadataBase,
