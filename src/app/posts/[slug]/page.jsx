@@ -7,9 +7,7 @@ import Comments from "@/components/comments/Comments";
 import Head from "next/head";
 
 const getData = async (slug) => {
-  const res = await fetch(`https://www.finprez.com/api/posts/${slug}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(`https://www.finprez.com/api/posts/${slug}`);
 
   if (!res.ok) {
     throw new Error("Failed");
