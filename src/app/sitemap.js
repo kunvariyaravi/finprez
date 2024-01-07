@@ -1,6 +1,11 @@
 export default async function sitemap() {
     const response = await fetch("https://www.finprez.com/api/ipopost");
     const { posts } = await response.json();
+
+    if (!posts) {
+        console.error("No posts found in the API response.");
+        return []; // Return an empty array or handle the error appropriately
+      }
   
     const ipopostEntries = posts.map(({ iposlug }) => ({
       url: `https://www.finprez.com/ipopost/${iposlug}`,
