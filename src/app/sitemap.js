@@ -8,7 +8,7 @@ export default async function sitemap() {
       }
   
     const ipopostEntries = posts.map(({ iposlug }) => ({
-      url: `https://www.finprez.com/ipopost/${iposlug}`,
+      url: `https://www.finprez.com/ipo/${iposlug}`,
       // lastModified: new Date(post.updatedAt),
       // changeFrequency:,
       // priority:
