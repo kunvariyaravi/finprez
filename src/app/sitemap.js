@@ -1,25 +1,35 @@
 export default async function sitemap() {
-    const response = await fetch("https://www.finprez.com/api/ipopost");
-    const { posts } = await response.json();
-
-    if (!posts) {
-        console.error("No posts found in the API response.");
-        return []; // Return an empty array or handle the error appropriately
+    try {
+      const response = await fetch("https://www.finprez.com/api/ipopost");
+      
+      if (!response.ok) {
+        throw new Error(`Failed to fetch data. Status: ${response.status}`);
       }
   
-    const ipopostEntries = posts.map(({ iposlug }) => ({
-      url: `https://www.finprez.com/ipo/${iposlug}`,
-      // lastModified: new Date(post.updatedAt),
-      // changeFrequency:,
-      // priority:
-    }));
+      const { posts } = await response.json();
   
-    return [
-      //   {
-      //     url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
-      //     lastModified: new Date(),
-      //   },
-      ...ipopostEntries,
-    ];
+      if (!posts || posts.length === 0) {
+        console.error("No posts found in the API response.");
+        return [];
+      }
+  
+      const ipopostEntries = posts.map(({ iposlug }) => ({
+        url: `https://www.finprez.com/ipo/${iposlug}`,
+        // lastModified: new Date(post.updatedAt),
+        // changeFrequency:,
+        // priority:
+      }));
+  
+      return [
+        //   {
+        //     url: `${process.env.NEXT_PUBLIC_BASE_URL}/about`,
+        //     lastModified: new Date(),
+        //   },
+        ...ipopostEntries,
+      ];
+    } catch (error) {
+      console.error("Error:", error.message);
+      return [];
+    }
   }
   
