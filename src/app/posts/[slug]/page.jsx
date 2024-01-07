@@ -44,7 +44,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: post.title,
-    description: post.desc.substring(0, 160),
+    description: post.metadescription,
     openGraph: {
       images: [
         {
