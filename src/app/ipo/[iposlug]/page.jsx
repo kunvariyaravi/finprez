@@ -1,4 +1,3 @@
-e;
 // Importing necessary modules and components
 import Menu from "@/components/Menu/Menu";
 import styles from "./singleipo.module.css";
