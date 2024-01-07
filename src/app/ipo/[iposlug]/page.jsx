@@ -17,6 +17,52 @@ const getData = async (iposlug) => {
   return res.json();
 };
 
+// Async function to generate static parameters for Next.js static site generation
+export async function generateStaticParams() {
+  try {
+    const response = await fetch("https://www.finprez.com/api/ipopost");
+    const { posts } = await response.json();
+
+    // Check if 'posts' is an array before mapping over it
+    if (Array.isArray(posts)) {
+      return posts.map(({ id }) => ({ params: { slug: id.toString() } }));
+    } else {
+      console.error(
+        "API response did not contain a valid 'posts' array:",
+        posts
+      );
+      return [];
+    }
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    return [];
+  }
+}
+
+// Async function to generate metadata for a specific post
+export async function generateMetadata({ params }) {
+  const { iposlug } = params;
+  const response = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`);
+  const post = await response.json();
+
+  if (response.ok && post) {
+    return {
+      title: post.title,
+      description: post.title ,
+      openGraph: {
+        images: [
+          {
+            url: post.img,
+          },
+        ],
+      },
+    };
+ } else {
+    console.error("Error fetching post data:", response.status, post);
+    return {};
+ }
+}
+
 // Function to format a date string
 const formatDate = (dateString) => {
   const options = { year: "numeric", month: "2-digit", day: "2-digit" };
