@@ -23,7 +23,9 @@ export default async function sitemap() {
     ${ipopostEntries.map(entry => `  <url>\n    <loc>${entry.url}</loc>\n  </url>`).join('\n')}
   </urlset>`;
   
-      return sitemapXML;
+  console.log("Generated XML:", sitemapXML);
+  return sitemapXML;
+  
     } catch (error) {
       console.error("Error:", error);
       return ''; // Return an empty string or handle accordingly in case of an error.
