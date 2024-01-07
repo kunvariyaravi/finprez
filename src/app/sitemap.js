@@ -13,8 +13,9 @@ export default async function sitemap() {
         return ''; // Return an empty string or handle accordingly if no posts are found.
       }
   
-      const ipopostEntries = posts.map(({ iposlug }) => ({
+      const ipopostEntries = posts?.map(({ iposlug }) => ({
         url: `https://www.finprez.com/ipo/${iposlug}`,
+        lastModified: post?.createdAt,
       }));
   
       // Build the sitemap XML content with proper indentation
@@ -31,4 +32,6 @@ export default async function sitemap() {
       return ''; // Return an empty string or handle accordingly in case of an error.
     }
   }
+
+  export const dynamic = 'force-dynamic'
   
