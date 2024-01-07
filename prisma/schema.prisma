@@ -93,13 +93,14 @@ model Comment {
 }
 
 model Ipopost {
-  id          String   @id @default(cuid()) @map("_id")
-  createdAt   DateTime @default(now())
-  title       String
-  iposlug     String   @unique
-  company     String
-  description String
-  img         String?
+  id              String   @id @default(cuid()) @map("_id")
+  createdAt       DateTime @default(now())
+  title           String
+  iposlug         String   @unique
+  company         String
+  metadescription String?
+  description     String
+  img             String?
 
   // important dates
   opendate      DateTime?
