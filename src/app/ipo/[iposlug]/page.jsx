@@ -7,7 +7,7 @@ import Comments from "@/components/comments/Comments";
 // Async function to fetch data for a specific IPO using its slug
 const getData = async (iposlug) => {
   const res = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`, {
-    cache: "no-store",
+    // cache: "no-store",
   });
 
   if (!res.ok) {
