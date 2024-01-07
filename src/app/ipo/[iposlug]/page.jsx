@@ -48,7 +48,7 @@ export async function generateMetadata({ params }) {
   if (response.ok && post) {
     return {
       title: post.title,
-      description: post.metadesc,
+      description: post.title,
       openGraph: {
         images: [
           {
