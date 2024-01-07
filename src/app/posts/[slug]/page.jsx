@@ -1,21 +1,26 @@
-// "use client"
-
+// Importing necessary modules and components
 import Menu from "@/components/Menu/Menu";
 import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
-import Head from "next/head";
 
+// Async function to fetch data for a specific post using its slug
 const getData = async (slug) => {
-  const res = await fetch(`https://www.finprez.com/api/posts/${slug}`);
+  try {
+    const res = await fetch(`https://www.finprez.com/api/posts/${slug}`);
 
-  if (!res.ok) {
-    throw new Error("Failed");
+    if (!res.ok) {
+      throw new Error("Failed");
+    }
+
+    return res.json();
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+    throw error;
   }
-
-  return res.json();
 };
 
+// Async function to generate static parameters for Next.js static site generation
 export async function generateStaticParams() {
   try {
     const response = await fetch("https://www.finprez.com/api/posts");
@@ -37,38 +42,40 @@ export async function generateStaticParams() {
   }
 }
 
+// Async function to generate metadata for a specific post
 export async function generateMetadata({ params }) {
   const { slug } = params;
   const response = await fetch(`https://www.finprez.com/api/posts/${slug}`);
   const post = await response.json();
 
-  return {
-    title: post.title,
-    description: post.metadescription,
-    openGraph: {
-      images: [
-        {
-          url: post.img,
-        },
-      ],
-    },
-  };
+  if (response.ok && post) {
+    return {
+      title: post.title,
+      description: post.metadescription,
+      openGraph: {
+        images: [
+          {
+            url: post.img,
+          },
+        ],
+      },
+    };
+ } else {
+    console.error("Error fetching post data:", response.status, post);
+    return {};
+ }
 }
 
+// Async component to display a single page with post details
 const SinglePage = async ({ params }) => {
   const { slug } = params;
 
+  // Fetch data for the specific post
   const data = await getData(slug);
 
+  // Render the single page with post details
   return (
     <div className={styles.container}>
-      {/* <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content={pageImage} />
-      </Head> */}
       <div className={styles.textContainer}>
         <h1 className={styles.title}>{data?.title}</h1>
       </div>
@@ -111,4 +118,5 @@ const SinglePage = async ({ params }) => {
   );
 };
 
+// Exporting the SinglePage component as the default export
 export default SinglePage;
