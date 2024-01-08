@@ -6,9 +6,7 @@ import Comments from "@/components/comments/Comments";
 
 // Async function to fetch data for a specific IPO using its slug
 const getData = async (iposlug) => {
-  const res = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`, {
-    // cache: "no-store",
-  });
+  const res = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`);
 
   if (!res.ok) {
     throw new Error("Failed");
@@ -20,7 +18,7 @@ const getData = async (iposlug) => {
 // Async function to generate static parameters for Next.js static site generation
 export async function generateStaticParams() {
   try {
-    const response = await fetch("https://www.finprez.com/api/ipopost");
+    const response = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`);
     const { posts } = await response.json();
 
     // Log the response from the API
