@@ -97,7 +97,7 @@ model Ipopost {
   title       String
   iposlug     String   @unique
   company     String
-  description String
+  description String?
   img         String?
 
   // important dates
