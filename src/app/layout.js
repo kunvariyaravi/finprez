@@ -5,18 +5,17 @@ import Footer from "@/components/footer/Footer";
 import { ThemeContextProvider } from "@/context/ThemeContext";
 import ThemeProvider from "@/providers/ThemeProvider";
 import AuthProvider from "@/providers/AuthProvider";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const lexend = Lexend({ subsets: ["latin"] });
 
 export const metadata = {
   title: "FinPrez",
-  description:
-    "FinPrez provides the latest stock market, IPO, financial and business news. Get personal finance advice, company news and more",
+  description: "FinPrez provides the latest stock market, IPO, financial and business news. Get personal finance advice, company news and more",
   openGraph: {
-    images: "/opengraph-image.jpg",
-  },
+    images: '/opengraph-image.jpg',
+  }
+  
 };
 
 export default function RootLayout({ children }) {
@@ -29,9 +28,8 @@ export default function RootLayout({ children }) {
               <div className="container">
                 <div className="wrapper">
                   <Navbar />
-                  <Analytics />
-                  <SpeedInsights />
                   {children}
+                  <SpeedInsights />
                   <Footer />
                 </div>
               </div>
