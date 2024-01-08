@@ -67,19 +67,19 @@ model Category {
 }
 
 model Post {
-  id              String    @id @default(cuid()) @map("_id")
-  createdAt       DateTime  @default(now())
-  slug            String    @unique
-  title           String
+  id        String    @id @default(cuid()) @map("_id")
+  createdAt DateTime  @default(now())
+  slug      String    @unique
+  title     String
   // metadescription String?
-  desc            String
-  img             String?
-  views           Int       @default(0)
-  catSlug         String
-  cat             Category  @relation(fields: [catSlug], references: [slug])
-  userEmail       String
-  user            User      @relation(fields: [userEmail], references: [email])
-  comments        Comment[]
+  desc      String
+  img       String?
+  views     Int       @default(0)
+  catSlug   String
+  cat       Category  @relation(fields: [catSlug], references: [slug])
+  userEmail String
+  user      User      @relation(fields: [userEmail], references: [email])
+  comments  Comment[]
 }
 
 model Comment {
@@ -93,14 +93,20 @@ model Comment {
 }
 
 model Ipopost {
-  id          String   @id @default(cuid()) @map("_id")
-  createdAt   DateTime @default(now())
-  title       String
-  iposlug     String   @unique
-  company     String
+  id        String   @id @default(cuid()) @map("_id")
+  createdAt DateTime @default(now())
+  title     String
+  iposlug   String   @unique
+  company   String
   // metadesc    String?
-  description String
-  img         String?
+  p1        String?
+  p2        String?
+  p3        String?
+  p4        String?
+  p5        String?
+  p6        String?
+  p7        String?
+  img       String?
 
   // important dates
   opendate      DateTime?
@@ -110,7 +116,7 @@ model Ipopost {
 
   price            String?
   lot              Int?
-  gmp              Float?
+  gmp              Int?
   listingat        String?
   totalissueshares String?
   totalissuesize   String?
