@@ -22,6 +22,7 @@ export async function generateStaticParams() {
   try {
     const response = await fetch("https://www.finprez.com/api/ipopost");
     const { posts } = await response.json();
+    console.log(posts)
 
     // Check if 'posts' is an array before mapping over it
     if (Array.isArray(posts)) {
