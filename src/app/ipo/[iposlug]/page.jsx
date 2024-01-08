@@ -22,8 +22,9 @@ export async function generateStaticParams() {
   try {
     const response = await fetch("https://www.finprez.com/api/ipopost");
     const { posts } = await response.json();
-    console.log(posts)
 
+    // Log the response from the API
+    console.log("API Response:", posts);
     // Check if 'posts' is an array before mapping over it
     if (Array.isArray(posts)) {
       return posts.map(({ id }) => ({ params: { slug: id.toString() } }));
@@ -46,6 +47,9 @@ export async function generateMetadata({ params }) {
   const response = await fetch(`https://www.finprez.com/api/ipopost/${iposlug}`);
   const post = await response.json();
 
+  // Log the fetched post data
+  console.log("Fetched Post Data:", post);
+
   if (response.ok && post) {
     return {
       title: post.title,
@@ -58,10 +62,10 @@ export async function generateMetadata({ params }) {
         ],
       },
     };
- } else {
+  } else {
     console.error("Error fetching post data:", response.status, post);
     return {};
- }
+  }
 }
 
 // Function to format a date string
