@@ -29,6 +29,7 @@ export default function RootLayout({ children }) {
                 <div className="wrapper">
                   <Navbar />
                   {children}
+                  <Analytics />
                   <SpeedInsights />
                   <Footer />
                 </div>
