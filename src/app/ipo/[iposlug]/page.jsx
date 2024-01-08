@@ -98,7 +98,7 @@ const ipoPage = async ({ params }) => {
             />
           </div>
           <div>
-            <p className={styles.responsiveParagraph}>
+            {/* <p className={styles.responsiveParagraph}>
               {data.title} bidding starts from {formatDate(data.opendate)} and
               ends on {formatDate(data.closedate)}. The allotment for the{" "}
               {data.title} is expected to be finalized on{" "}
@@ -108,7 +108,7 @@ const ipoPage = async ({ params }) => {
               {data.price} per share. The minimum lot size for an application is{" "}
               {data.lot} Shares. The minimum amount of investment required by
               retail investors is ₹{data.rminamount}.
-            </p>
+            </p> */}
             <h2 className={styles.responsiveHeading}>
               About {data.company} :-
             </h2>
